@@ -7,13 +7,48 @@
       <script src="aframe-gif-shader.min.js"></script>
   </head>
   <body>
+	  <style>
+    .arjs-loader {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .arjs-loader div {
+        text-align: center;
+        font-size: 1.25em;
+        color: white;
+    }
+</style>
+
+<body style='margin : 0px; overflow: hidden;'>
+    <div class="arjs-loader">
+        <div>ANGL801 The paddle-izer 
+		<br/>
+		Loading, please wait...
+	    <br/>
+		After loading, center the camera on the figure.</div>
+    </div>
+  
+  <body style='margin : 0px; overflow: hidden; font-family: Monospace;'><div style='font-family: Monospace; position: absolute; top: 10px; width:100%; text-align: center; z-index: 1;'>
+	DOUMAISELLE - LAFARGE - VONDERSCHER
+	  <br>
+</div>
+
     <a-scene mindar-image="imageTargetSrc: https://vonderscher1000n.github.io/Code_AR/target/target_anglais.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
     <a-asset-item id="avatarModel" src="https://vonderscher1000n.github.io/Code_AR/model/anglais.glb"></a-asset-item>
       </a-assets>
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
       <a-entity mindar-image-target="targetIndex: 0">
-        <a-gltf-model rotation="0 0 0 " position="0 0 10" scale="300 300 300" src="#avatarModel"
+        <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="100 100 100" src="#avatarModel"
           animation__1="property: rotation; to: 180 360 180; loop: true; dur: 10000; dir: alternate";
 	  animation__2="property: position; to: 0 0.1 0.1; dur: 1000; loop: true; dir: alternate";
       </a-entity>
